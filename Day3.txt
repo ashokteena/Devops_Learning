@@ -1,0 +1,181 @@
+Azure Devops Learning:
+---------------------
+Day 3:
+-----
+1. Set up Git
+Install Git on your system.
+Configure your username and email:
+bash
+ 
+2. Initialize a Git Repository
+Create a new project folder and initialize it as a Git repository:
+bash
+ 
+ 
+3. Create and Track Files
+Create a new file (README.md) and write some text in it.
+Stage and commit the file:
+ 
+ 
+ 
+4. Modify Files and View Changes
+Modify README.md.
+Check the file status and differences:
+ 
+Concepts: Checking the status of a repository, viewing unstaged changes.
+ 
+5. Create Branches
+Create a new branch:
+ 
+Concepts: Branching, switching branches.
+6. Make Changes in a Branch
+Add a new file (feature.txt) and commit it to the branch:
+ 
+Concepts: Working on a branch.
+ 
+7. Merge Branches
+Switch back to the main branch and merge the feature branch:
+ 
+Concepts: Merging branches.
+ 
+8. Resolve Merge Conflicts
+Simulate a conflict:
+Edit README.md differently in main and feature-branch.
+Merge feature-branch into main and resolve the conflict:
+ 
+Concepts: Conflict resolution.
+ 
+9. Undo Changes
+Try undoing changes in different scenarios:
+Unstaged changes:
+ 
+Concepts: Undoing changes, resetting, reverting commits.
+ 
+10. Work with Remote Repositories
+Create a repository on GitHub.
+Add the remote repository:
+ 
+Concepts: Working with remote repositories, pushing code.
+ 
+11. Clone and Pull Repositories
+Clone a repository:
+bash
+C
+Concepts: Cloning, pulling updates.
+ 
+12. Stash Changes
+Make changes but don’t commit them:
+ 
+Concepts: Stashing changes.
+13. View Commit History
+View the commit history:
+ 
+Concepts: Viewing commit history.
+ 
+14. Tagging
+Add a tag to a commit:
+ 
+Concepts: Tagging commits.
+ 
+15. Use .gitignore
+Create a .gitignore file and add patterns for files to ignore (e.g., *.log, node_modules/).
+Test ignoring files.
+Concepts: Ignoring files.
+ 
+13. View Commit History
+View the commit history:
+ 
+Concepts: Viewing commit history.
+ 
+14. Tagging
+Add a tag to a commit:
+ 
+Concepts: Tagging commits.
+ 
+15. Use .gitignore
+Create a .gitignore file and add patterns for files to ignore (e.g., *.log, node_modules/).
+Test ignoring files.
+Concepts: Ignoring files.
+ 
+https://learn.microsoft.com/en-us/cli/azure/get-started-tutorial-0-before-you-begin
+ 
+ 
+1 - Begin your Azure CLI journey
+2 - Prepare your environment
+3 - Learn syntax differences for environments
+4 - Populate variables for scripts
+5 - Delete resources using a script
+https://learn.microsoft.com/en-us/cli/azure/azure-cli-vm-tutorial-1?tabs=bash
+ 
+1 - Overview and prerequisites
+2 - Create a virtual network
+3 - Create a virtual machine
+4 - Get VM information with queries
+5 - Set shell variables
+6 - Cleanup
+7 - Summary
+Learn about Azure CLI environments, terms, and compare the Azure CLI to Azure PowerShell | Microsoft Learn
+Learn the environments you can use to execute Azure CLI commands, Azure CLI terms, how the Azure CLI compares to Azure PowerShell.
+ 
+6. Work with Azure Kubernetes Service (AKS)
+Create an AKS Cluster:
+bash
+Copy code
+az aks create --resource-group MyResourceGroup --name MyAKSCluster --node-count 2 --enable-addons monitoring --generate-ssh-keys
+Get AKS Credentials:
+bash
+Copy code
+az aks get-credentials --resource-group MyResourceGroup --name MyAKSCluster
+List AKS Clusters:
+bash
+Copy code
+az aks list --output table
+Concepts: Kubernetes management in Azure.
+ 
+7. Deploy an Azure Web App
+Create an App Service Plan:
+bash
+Copy code
+az appservice plan create --name MyAppServicePlan --resource-group MyResourceGroup --sku FREE
+Create a Web App:
+bash
+Copy code
+az webapp create --resource-group MyResourceGroup --plan MyAppServicePlan --name MyUniqueWebAppName
+Browse the Web App:
+bash
+Copy code
+az webapp browse --name MyUniqueWebAppName --resource-group MyResourceGroup
+Concepts: Deploying web applications.
+8. Monitor Resources
+View Resource Group Usage:
+bash
+Copy code
+az monitor metrics list --resource MyResourceGroup --metric "Percentage CPU"
+List Logs for a Resource:
+bash
+Copy code
+az monitor log-profiles list
+Concepts: Monitoring and logging.
+ 
+9. Manage Azure Functions
+Create a Function App:
+bash
+Copy code
+az functionapp create --resource-group MyResourceGroup --consumption-plan-location eastus --name MyFunctionApp --storage-account mystorageaccount123 --runtime python
+Concepts: Azure Functions setup.
+ 
+10. Automate with Azure CLI Scripts
+Write a Bash script to automate resource creation:
+ 
+bash
+Copy code
+#!/bin/bash
+az group create --name MyAutomationGroup --location eastus
+az storage account create --name autoaccount123 --resource-group MyAutomationGroup --location eastus --sku Standard_LRS
+az vm create --resource-group MyAutomationGroup --name AutoVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
+Run it with:
+bash
+Copy code
+bash automate_resources.sh
+Concepts: Automation with Azure CLI.
+ 
