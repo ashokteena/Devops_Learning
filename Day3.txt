@@ -178,4 +178,41 @@ bash
 Copy code
 bash automate_resources.sh
 Concepts: Automation with Azure CLI.
+-----------------------
+full content mentioned below
+--------------------------
+bash
+
+Copy code
+
+bash automate_resources.sh
+
+Concepts: Automation with Azure CLI.
+
+ACME System 1 - Log In
+
+pip install selenium
+
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+
+pytest-selenium
+
+pytest-xdist
+
+selenium>=4.6.0
+
+urllib3==1.26.12
+
+requests
+
+python-dotenv
+
+bs4
+
+py
+
+Please write pip install before all the dependencies
+
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
  
